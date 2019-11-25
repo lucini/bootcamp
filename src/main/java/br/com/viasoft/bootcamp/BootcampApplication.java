@@ -7,7 +7,6 @@ import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
-@EnableDiscoveryClient
 @EnableCircuitBreaker
 @EnableCaching
 public class BootcampApplication {

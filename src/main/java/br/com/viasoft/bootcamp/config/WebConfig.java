@@ -36,17 +36,6 @@ public class WebConfig implements WebMvcConfigurer {
 			.allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "TRACE", "CONNECT");
 	}
 
-	@Override
-	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler(
-				"/img/**",
-				"/css/**",
-				"/js/**")
-				.addResourceLocations(
-						"classpath:/static/img/",
-						"classpath:/static/css/",
-						"classpath:/static/js/");
-	}
 
 	private MappingJackson2HttpMessageConverter customJackson2HttpMessageConverter() {
 		SimpleModule module = new SimpleModule("bootCamp", Version.unknownVersion());
