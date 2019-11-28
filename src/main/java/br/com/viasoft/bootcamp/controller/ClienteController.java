@@ -27,7 +27,7 @@ public class ClienteController extends CrudRestController<Cliente, Long> {
     }
 
     @GetMapping("complete")
-    public List<Cliente> complete(@RequestParam("nome") String nome) {
+    public List<Cliente> complete(@RequestParam("query") String nome) {
         return clienteService.complete(nome);
     }
 

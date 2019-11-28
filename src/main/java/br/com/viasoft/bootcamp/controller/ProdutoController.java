@@ -27,7 +27,7 @@ public class ProdutoController extends CrudRestController<Produto, Long> {
     }
 
     @GetMapping("complete")
-    public List<Produto> complete(@RequestParam("descricao") String descricao) {
+    public List<Produto> complete(@RequestParam("query") String descricao) {
         return produtoService.complete(descricao);
     }
 
